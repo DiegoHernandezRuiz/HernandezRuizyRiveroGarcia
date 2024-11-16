@@ -1,77 +1,40 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./Menu.css";
 
-function App() {
+const App = () => {
+  const user = "Usuario en línea";
+  const modeloMaquinaria = "Modelo de Maquinaria XYZ";
+  const fecha = new Date().toLocaleDateString();
+
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>AD Solutions - Mantenimiento de Maquinaria</h1>
+      {/* Barra superior */}
+      <header className="header">
+        <div className="header-info">
+          <span>{modeloMaquinaria}</span>
+          <span>{fecha}</span>
+          <span>{user}</span>
+        </div>
       </header>
 
-      <section className="section">
-        <h2>Intervenciones Realizadas en la Maquinaria</h2>
+      {/* Menú de navegación */}
+      <nav className="sidebar">
         <ul>
-          <li>Reemplazo de piezas dañadas en el equipo de alimentación.</li>
-          <li>Ajuste de calibración en maquinaria de limpieza.</li>
-          <li>Inspección de sistemas hidráulicos.</li>
+          <li>Cambiar piezas o componentes de maquinaria</li>
+          <li>Suspender maquinaria</li>
+          <li>Reparaciones al día de hoy</li>
+          <li>Realizar copia de seguridad</li>
         </ul>
-      </section>
+        <button className="main-menu-button">Ir al Menú Principal</button>
+      </nav>
 
-      <section className="section">
-        <h2>Tipos de Mantenimiento Realizados</h2>
-        <ul>
-          <li>Mantenimiento preventivo</li>
-          <li>Mantenimiento correctivo</li>
-          <li>Mantenimiento predictivo</li>
-        </ul>
-      </section>
-
-      <section className="section">
-        <h2>Frecuencia de los Mantenimientos</h2>
-        <ul>
-          <li>Mensual</li>
-          <li>Trimestral</li>
-          <li>Anual</li>
-        </ul>
-      </section>
-
-      <section className="section">
-        <h2>Responsables de las Ejecuciones</h2>
-        <ul>
-          <li>Juan Pérez - Técnico de maquinaria</li>
-          <li>Ana González - Ingeniera de mantenimiento</li>
-          <li>Carlos López - Coordinador de operaciones</li>
-        </ul>
-      </section>
-
-      <section className="section">
-        <h2>Tiempo Dedicado a las Actividades</h2>
-        <ul>
-          <li>Inspección: 2 horas</li>
-          <li>Reemplazo de piezas: 4 horas</li>
-          <li>Calibración: 3 horas</li>
-        </ul>
-      </section>
-
-      <section className="section">
-        <h2>Materiales Utilizados</h2>
-        <ul>
-          <li>Piezas de repuesto</li>
-          <li>Aceite lubricante</li>
-          <li>Herramientas de calibración</li>
-        </ul>
-      </section>
-
-      <section className="section">
-        <h2>Costo de los Mantenimientos</h2>
-        <ul>
-          <li>Mantenimiento preventivo: $150</li>
-          <li>Mantenimiento correctivo: $300</li>
-          <li>Mantenimiento predictivo: $500</li>
-        </ul>
-      </section>
+      {/* Contenido */}
+      <main className="content">
+        <h1>Bienvenido a A.D Solutions</h1>
+        <p>Seleccione una opción en el menú para continuar.</p>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
