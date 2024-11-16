@@ -1,0 +1,74 @@
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Contenedor principal */
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilo del encabezado */
+.app-header {
+  background-color: #2d3e50;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Estilo para cada sección */
+.section {
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: #2d3e50;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Efecto hover para las secciones */
+.section:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+}
