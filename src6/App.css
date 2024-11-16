@@ -1,0 +1,83 @@
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+/* Estilos de la barra superior */
+.header .info-bar {
+  background-color: #3B82F6;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* Estilos del menú lateral */
+.sidebar {
+  width: 250px;
+  background-color: #1E3A8A;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li button {
+  width: 100%;
+  padding: 10px;
+  background-color: #60A5FA;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li button:hover {
+  background-color: #3B82F6;
+}
+
+.main-menu-button {
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #3B82F6;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main-menu-button:hover {
+  background-color: #2563EB;
+}
+
+/* Estilos del contenido principal */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #F3F4F6;
+}
