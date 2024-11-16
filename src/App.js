@@ -1,40 +1,42 @@
-import React from "react";
-import "./Menu.css";
+import React from 'react';
+import './App.css';
 
-const App = () => {
-  const user = "Usuario en línea";
-  const modeloMaquinaria = "Modelo de Maquinaria XYZ";
-  const fecha = new Date().toLocaleDateString();
+function App() {
+  const currentDate = new Date().toLocaleDateString();
+  const user = "Juan Pérez"; // Aquí puedes poner la variable del usuario en línea
+  const securityNumber = "123456"; // Número de seguridad
+  const handleSecurityCheck = () => {
+    alert('Realizando revisión de seguridad...');
+  };
+  const handleVirusRemoval = () => {
+    alert('Eliminando virus y amenazas...');
+  };
 
   return (
-    <div className="app">
-      {/* Barra superior */}
+    <div className="App">
+      {/* Barra Superior */}
       <header className="header">
         <div className="header-info">
-          <span>{modeloMaquinaria}</span>
-          <span>{fecha}</span>
-          <span>{user}</span>
+          <h2>Reporte de Seguridad</h2>
+          <p>Seguridad N°: {securityNumber}</p>
+          <p>Fecha: {currentDate}</p>
+          <p>Usuario en línea: {user}</p>
         </div>
       </header>
 
-      {/* Menú de navegación */}
-      <nav className="sidebar">
+      {/* Menú de Apartados */}
+      <nav className="menu">
         <ul>
-          <li>Cambiar piezas o componentes de maquinaria</li>
-          <li>Suspender maquinaria</li>
-          <li>Reparaciones al día de hoy</li>
-          <li>Realizar copia de seguridad</li>
+          <li>
+            <button onClick={handleSecurityCheck} className="menu-item">Realizar Revisión de Seguridad del Sistema</button>
+          </li>
+          <li>
+            <button onClick={handleVirusRemoval} className="menu-item">Eliminar Virus y Amenazas</button>
+          </li>
         </ul>
-        <button className="main-menu-button">Ir al Menú Principal</button>
       </nav>
-
-      {/* Contenido */}
-      <main className="content">
-        <h1>Bienvenido a A.D Solutions</h1>
-        <p>Seleccione una opción en el menú para continuar.</p>
-      </main>
     </div>
   );
-};
+}
 
 export default App;
